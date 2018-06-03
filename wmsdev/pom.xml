@@ -10,5 +10,8 @@
   <modules>
     <module>wmsweb</module>
     <module>wmsdata</module>
+    <module>wmsrest</module>
+    <module>wmsejb</module>
+    <module>wmsear</module>
   </modules>
 </project>
