@@ -14,10 +14,10 @@
         <dependent-module archiveName="wmsdata-0.0.1-SNAPSHOT.jar" deploy-path="/lib" handle="module:/resource/wmsdata/wmsdata">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="javax.persistence-api-2.2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar">
+        <dependent-module archiveName="jaxb-api-2.2.11.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/javax/xml/bind/jaxb-api/2.2.11/jaxb-api-2.2.11.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jaxb-api-2.2.11.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/javax/xml/bind/jaxb-api/2.2.11/jaxb-api-2.2.11.jar">
+        <dependent-module archiveName="mysql-connector-java-5.1.37.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/mysql/mysql-connector-java/5.1.37/mysql-connector-java-5.1.37.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>
