@@ -1,6 +1,8 @@
 package com.wmsjeb.beans;
 
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import wmsdata.UserBean;
 
@@ -10,8 +12,8 @@ import wmsdata.UserBean;
 @Stateless
 public class LoginServiceBean implements LoginServiceBeanLocal, LoginServiceBeanRemote{
 
-	//@PersistenceContext
-	//private EntityManager em;
+	@PersistenceContext
+	private EntityManager em;
     /**
      * Default constructor. 
      */
