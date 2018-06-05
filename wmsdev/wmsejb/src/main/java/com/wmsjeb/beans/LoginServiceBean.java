@@ -12,8 +12,8 @@ import wmsdata.UserBean;
 @Stateless
 public class LoginServiceBean implements LoginServiceBeanLocal, LoginServiceBeanRemote{
 
-	@PersistenceContext
-	private EntityManager em;
+	//@PersistenceContext
+	//private EntityManager em;
     /**
      * Default constructor. 
      */
