@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.auth.client.AuthenticationClient;
 import com.wmsweb.beans.SpringBean;
+
+import wmsdata.UserBean;
 
 @Controller
 public class HomeController {
@@ -26,5 +29,19 @@ public class HomeController {
 	@RequestMapping(value="/test")
 	public @ResponseBody String testMessage() {
 		return bean.getMessage();
+	}
+	
+	@RequestMapping(value="/authenticate")
+	public @ResponseBody String authenticate() {
+		String out = null;
+		AuthenticationClient ac = new AuthenticationClient();
+		UserBean bean = new UserBean();
+		bean.setUserName("root");
+		bean.setPassword("root@123");
+		if (ac.authenticate(bean))
+			out = "Logged in successfully";
+		else
+			out = "Failed to login";
+		return out;
 	}
 }
