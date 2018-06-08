@@ -9,12 +9,28 @@
   
   <!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client -->
 	<dependencies>
-		<dependency>
+		 <dependency>
+		      <groupId>org.jboss.resteasy</groupId>
+		       <artifactId>resteasy-jaxrs</artifactId>
+		      <version>3.0.2.Final</version>
+		   </dependency>
+		  <!-- JAXB support -->
+		  <dependency>
 		    <groupId>org.jboss.resteasy</groupId>
-		    <artifactId>resteasy-client</artifactId>
-		    <version>3.5.1.Final</version>
-		</dependency>
-		
+		      <artifactId>resteasy-jaxb-provider</artifactId>
+		    <version>3.0.2.Final</version>
+		  </dependency>
+		  <dependency>
+		      <groupId>org.jboss.resteasy</groupId>
+		      <artifactId>jaxrs-api</artifactId>
+		      <version>3.0.2.Final</version>
+		  </dependency>
+		  <dependency>
+		      <groupId>org.jboss.resteasy</groupId>
+		      <artifactId>resteasy-client</artifactId>
+		      <version>3.0.2.Final</version>
+		  </dependency>
+				
 		<dependency>
 			<groupId>com.wmsdev</groupId>
 		   <artifactId>wmsdata</artifactId>

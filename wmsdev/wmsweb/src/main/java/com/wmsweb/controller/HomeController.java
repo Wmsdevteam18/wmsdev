@@ -31,13 +31,18 @@ public class HomeController {
 		return bean.getMessage();
 	}
 	
+	@RequestMapping(value="/loginPage")
+	public String loginPage() {
+		return "login";
+	}
+	
 	@RequestMapping(value="/authenticate")
-	public @ResponseBody String authenticate() {
+	public @ResponseBody String authenticate(UserBean bean) {
 		String out = null;
 		AuthenticationClient ac = new AuthenticationClient();
-		UserBean bean = new UserBean();
+		/*UserBean bean = new UserBean();
 		bean.setUserName("root");
-		bean.setPassword("root@123");
+		bean.setPassword("root@123");*/
 		if (ac.authenticate(bean))
 			out = "Logged in successfully";
 		else
