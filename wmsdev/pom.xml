@@ -13,5 +13,6 @@
     <module>wmsrest</module>
     <module>wmsejb</module>
     <module>wmsear</module>
+    <module>wmsrestclient</module>
   </modules>
 </project>

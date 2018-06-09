@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.wmsdev</groupId>
+    <artifactId>wmsdev</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>wmsrestclient</artifactId>
+  
+  <!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client -->
+	<dependencies>
+		 <dependency>
+		      <groupId>org.jboss.resteasy</groupId>
+		       <artifactId>resteasy-jaxrs</artifactId>
+		      <version>3.0.2.Final</version>
+		   </dependency>
+		  <!-- JAXB support -->
+		  <dependency>
+		    <groupId>org.jboss.resteasy</groupId>
+		      <artifactId>resteasy-jaxb-provider</artifactId>
+		    <version>3.0.2.Final</version>
+		  </dependency>
+		  <dependency>
+		      <groupId>org.jboss.resteasy</groupId>
+		      <artifactId>jaxrs-api</artifactId>
+		      <version>3.0.2.Final</version>
+		  </dependency>
+		  <dependency>
+		      <groupId>org.jboss.resteasy</groupId>
+		      <artifactId>resteasy-client</artifactId>
+		      <version>3.0.2.Final</version>
+		  </dependency>
+				
+		<dependency>
+			<groupId>com.wmsdev</groupId>
+		   <artifactId>wmsdata</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	
+	  
+</project>

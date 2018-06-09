@@ -1,6 +1,10 @@
 package com.wmsjeb.beans;
 
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.wms.model.Password;
 
 import wmsdata.UserBean;
 
@@ -10,8 +14,8 @@ import wmsdata.UserBean;
 @Stateless
 public class LoginServiceBean implements LoginServiceBeanLocal, LoginServiceBeanRemote{
 
-	//@PersistenceContext
-	//private EntityManager em;
+	@PersistenceContext
+	private EntityManager em;
     /**
      * Default constructor. 
      */
@@ -20,10 +24,10 @@ public class LoginServiceBean implements LoginServiceBeanLocal, LoginServiceBean
     }
     
     public boolean authenticate(UserBean bean) {
-    	//UserBean dbBean = em.find(UserBean.class, bean.getUserName());
+    	Password dbBean = em.find(Password.class, bean.getUserName());
     	
-    	//return  dbBean!= null && dbBean.getPassword().equals(bean.getPassword());
-    	return true;
+    	return  dbBean!= null && dbBean.getPassword().equals(bean.getPassword());
+    	//return true;
     }
 
 }

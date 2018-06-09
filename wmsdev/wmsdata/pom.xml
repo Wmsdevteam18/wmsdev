@@ -10,4 +10,15 @@
   <description>This module should hold all bean classes needed.</description>
   <groupId>com.wmsdev</groupId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+	<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+	<dependency>
+	    <groupId>javax.xml.bind</groupId>
+	    <artifactId>jaxb-api</artifactId>
+	    <version>2.2.11</version>
+	</dependency>
+
+  </dependencies>
+  
 </project>
