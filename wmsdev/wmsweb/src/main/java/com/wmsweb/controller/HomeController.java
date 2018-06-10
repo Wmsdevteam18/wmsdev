@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.auth.client.AuthenticationClient;
+import com.wmsdev.rs.client.auth.AuthenticationClient;
 import com.wmsweb.beans.SpringBean;
+import com.wmsweb.service.AutheService;
 
 import wmsdata.UserBean;
 
@@ -19,7 +20,10 @@ import wmsdata.UserBean;
 public class HomeController {
 	
 	@Autowired
-	SpringBean bean;
+	private SpringBean bean;
+	
+	@Autowired
+	private AutheService ac;
 
 	@RequestMapping(value="/")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
@@ -39,7 +43,7 @@ public class HomeController {
 	@RequestMapping(value="/authenticate")
 	public @ResponseBody String authenticate(UserBean bean) {
 		String out = null;
-		AuthenticationClient ac = new AuthenticationClient();
+		//AuthenticationClient ac = new AuthenticationClient();
 		/*UserBean bean = new UserBean();
 		bean.setUserName("root");
 		bean.setPassword("root@123");*/
