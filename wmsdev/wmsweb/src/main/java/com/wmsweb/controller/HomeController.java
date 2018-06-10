@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.wmsdev.rs.client.auth.AuthenticationClient;
 import com.wmsweb.beans.SpringBean;
-import com.wmsweb.service.AutheService;
+import com.wmsweb.service.AuthService;
 
 import wmsdata.UserBean;
 
@@ -23,7 +23,7 @@ public class HomeController {
 	private SpringBean bean;
 	
 	@Autowired
-	private AutheService ac;
+	private AuthService ac;
 
 	@RequestMapping(value="/")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
